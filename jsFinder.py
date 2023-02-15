@@ -2,19 +2,36 @@ import argparse
 import json
 import requests
 import re
+import sys
 from bs4 import BeautifulSoup
 
-parser = argparse.ArgumentParser()
+parser = argparse.ArgumentParser(prog='jsFinder.py',
+                                 description='Author : https://github.com/pwnesec')
+
 parser.add_argument('--url', help='the URL of the website to crawl')
 parser.add_argument('--verbose', help='display URLs as they are found', action='store_true')
 parser.add_argument('--json', help='output results in JSON format', action='store_true')
 parser.add_argument('-o', '--output', help='save output to a file')
 parser.add_argument('--status-code', help='display status codes of the JavaScript files', action='store_true')
-args = parser.parse_args()
 
-if not args.url:
+if len(sys.argv) == 1:
+    print("""
+                    $$$$$$$$\ $$\                 $$\                     
+                    $$  _____|\__|                $$ |                    
+      $$\  $$$$$$$\ $$ |      $$\ $$$$$$$\   $$$$$$$ | $$$$$$\   $$$$$$\  
+      \__|$$  _____|$$$$$\    $$ |$$  __$$\ $$  __$$ |$$  __$$\ $$  __$$\ 
+      $$\ \$$$$$$\  $$  __|   $$ |$$ |  $$ |$$ /  $$ |$$$$$$$$ |$$ |  \__|
+      $$ | \____$$\ $$ |      $$ |$$ |  $$ |$$ |  $$ |$$   ____|$$ |      
+      $$ |$$$$$$$  |$$ |      $$ |$$ |  $$ |\$$$$$$$ |\$$$$$$$\ $$ |      
+      $$ |\_______/ \__|      \__|\__|  \__| \_______| \_______|\__|      
+$$\   $$ |                                                                
+\$$$$$$  |                                                                
+ \______/                                                                 
+""")
     parser.print_help()
 else:
+    args = parser.parse_args()
+
     response = requests.get(args.url)
     html_content = response.content
 
