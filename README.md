@@ -1,6 +1,6 @@
 # jsFinder
-` git clone https://github.com/pwnesec/jsFinder.git `
-` cd jsFinder `
+``` git clone https://github.com/pwnesec/jsFinder.git ```
+``` cd jsFinder ```
 
 # Usage
 ```
