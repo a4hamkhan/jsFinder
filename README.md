@@ -16,3 +16,9 @@ options:
                         save output to a file
   --status-code         display status codes of the JavaScript files
 ```
+# Example
+```
+json format  : python3 jsFinder.py --url https://facebook.com --json
+status code  : python3 jsFinder.py --url https://facebook.com --status-code
+verbose mode : python3 jsFinder.py --url https://facebook.com --verbos
+```
