@@ -1,5 +1,6 @@
 # jsFinder
-Script that find JS files of a website.
+` git clone https://github.com/pwnesec/jsFinder.git `
+` cd jsFinder `
 
 # Usage
 ```
