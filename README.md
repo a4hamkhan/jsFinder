@@ -1,7 +1,8 @@
 # jsFinder
-``` git clone https://github.com/pwnesec/jsFinder.git
+``` 
+git clone https://github.com/pwnesec/jsFinder.git
     cd jsFinder ```
-
+```
 # Usage
 ```
 usage: js-scrapper.py [-h] [--url URL] [--verbose] [--json] [-o OUTPUT] [--status-code]
