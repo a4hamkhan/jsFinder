@@ -5,7 +5,7 @@
 ```
 # Usage
 ```
-usage: js-scrapper.py [-h] [--url URL] [--verbose] [--json] [-o OUTPUT] [--status-code]
+usage: jsFinder.py [-h] [--url URL] [--verbose] [--json] [-o OUTPUT] [--status-code]
 
 options:
   -h, --help            show this help message and exit
